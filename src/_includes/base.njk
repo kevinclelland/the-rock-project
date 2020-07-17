@@ -11,31 +11,34 @@
 </head>
 <body>
   
+<div class="container">
 <div class="header">
   <img src="/assets/img/black.png" alt="The Rock Project">
 </div>
 
-  <ul>
-  <li><a href="/">Home</a></li>
-  <li><a href="/shotguntori">Shotgun Tori</a></li>
-  <li><a href="/perez">Perez</a></li>
-  <li><a href="/silentgenerator">Silent Generator</a></li>
-  <li><a href="/wonderboom">Wonderboom</a></li>
-  <li><a href="/about">About</a></li>
-  <li><a href="/news">News</a></li>
-  <li><a href="/strava">Strava</a></li>
-</ul>
-
-<div class="container">
-    <h1>{{ title }}</h1>
-    <div class="vibe">You ROCK!</div>
+<div class="vibe">You ROCK!</div>
     <div class="love">
         <i class="fas fa-headphones"></i> ❤️ <i class="fas fa-guitar"></i>
       
     </div>
+</div>
 
+  <ul>
+  <li class="navitem"><a href="/">Home</a></li>
+  <li class="navitem"><a href="/shotguntori">Shotgun Tori</a></li>
+  <li class="navitem"><a href="/perez">Perez</a></li>
+  <li class="navitem"><a href="/silentgenerator">Silent Generator</a></li>
+  <li class="navitem"><a href="/wonderboom">Wonderboom</a></li>
+  <li class="navitem"><a href="/about">About</a></li>
+  <li class="navitem"><a href="/news">News</a></li>
+  <li class="navitem"><a href="/strava">Strava</a></li>
+</ul>
+
+<div class="container">
+    <h1>{{ title }}</h1>
     
   </div>
+
   <script src="/js/vibe.js"></script>
 
   {{ content | safe }}

@@ -6,21 +6,21 @@ body {
     margin: 0 auto;
   }
   .love {
-    font-size: 8em;
+    font-size: 4em;
   }
 
   h1 {
       font-family: 'New Rocker', cursive;
-      font-size: 3em;
+      font-size: 2em;
   }
 
   .vibe {
       font-family: 'New Rocker', cursive;
-      font-size: 2em;
+      font-size: 1.5em;
   }
 
   img {
-      width: 30%;
+      width: 80%;
       height: auto;
   }
 
@@ -35,11 +35,11 @@ body {
     top: 0;
   }
 
-  li {
+  .navitem {
     float: left;
   }    
 
-  li a {
+  .navitem a {
     display: block;
     color: white;
     text-align: center;
@@ -50,6 +50,6 @@ body {
   }
 
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  .navitem a:hover {
     background-color: #111;
   }
