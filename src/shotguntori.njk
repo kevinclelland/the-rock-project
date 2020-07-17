@@ -5,28 +5,27 @@ layout: base.njk
 
 <style>
 
-
-
 /* Include the padding and border in an element's total width and height */
 * {
   box-sizing: border-box;
 }
 
 /* Remove margins and padding from the list */
-.song {
+#songName {
   margin: 0;
   padding: 0;
 }
 
 /* Style the list items */
-.song {
+#songName {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
   list-style-type: none;
   background: #eee;
-  font-size: 18px;
+  font-size: 0.6em;
   transition: 0.2s;
+  font-family: 'Montserrat', sans-serif;
   
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -36,19 +35,19 @@ layout: base.njk
 }
 
 /* Set all odd list items to a different color (zebra-stripes) */
-.song:nth-child(odd) {
+#songName:nth-child(odd) {
   background: #f9f9f9;
 }
 
 /* Darker background-color on hover */
-.song:hover {
+#songName:hover {
   background: #ddd;
 }
 
 /* When clicked on, add a background color and strike out text */
 ul li.checked {
   background: #888;
-  color: #fff;
+  color: #255e16;
   text-decoration: line-through;
 }
 
@@ -56,7 +55,7 @@ ul li.checked {
 ul li.checked::before {
   content: '';
   position: absolute;
-  border-color: #fff;
+  border-color: #030303;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -86,54 +85,256 @@ ul li.checked::before {
   clear: both;
 }
 
-/* Style the input */
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
+
+#myUL {
+  width: auto;
+  border: 10px solid #828180;
+  padding: 20px;
+  margin: 20px;
 }
 
-/* Style the "Add" button */
-.addBtn {
-  padding: 10px;
-  width: 25%;
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
+.grid-container {
+  display: inline-grid;
+  height: 100%;
+  align-content: start;
+  
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  background-color: #828180;
+  padding: 50px;
 }
 
-.addBtn:hover {
+.grid-container > div {
   background-color: #bbb;
+  text-align: center;
+  padding: auto auto;
+  font-size: 30px;
+}
+
+#instructions {
+  font-size: 2em;
+  text-align: left;
+  padding: 20px 8px 12px 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#beBrave {
+  padding: 25px 25px 25px 25px;
+  width: 100%;
+}
+
+#songDetails {
+  padding: 25px 25px 25px 25px;
+  width: 50%;
 }
 
 </style>
 
-<h2>Album: Be brave</h2><br>
+<h1>Album: Be brave</h1><br>
 
+<div class="song grid-container">
 
+<div>
 <ul id="myUL">
-  <li class="song">Brightside</li>
-  <li class="song">Dear John</li>
-  <li class="song">Be Brave</li>
-  <li class="song">Nights Like That</li>
-  <li class="song">Wooden Decks</li>
-  <li class="song checked">Game Changer</li>
-  <li class="song">Neon Lights</li>
-  <li class="song">Some Sort of Grace</li>
-  <li class="song">Grand Delusions</li>
-  <li class="song">Where Did I Go</li>
-  <li class="song">Zombie Song</li>
-  <li class="song">Love of Folk</li>
+  <li id="songName">Brightside</li>
+  <li id="songName">Dear John</li>
+  <li id="songName">Be Brave</li>
+  <li id="songName">Nights Like That</li>
+  <li id="songName">Wooden Decks</li>
+  <li id="songName">Game Changer</li>
+  <li id="songName">Neon Lights</li>
+  <li id="songName">Some Sort of Grace</li>
+  <li id="songName">Grand Delusions</li>
+  <li id="songName">Where Did I Go</li>
+  <li id="songName">Zombie Song</li>
+  <li id="songName">Love of Folk</li>
 </ul>
+</div>
+
+<div id="instructions">
+1) Open Spotify<br>
+2) Search Shotgun Tori<br>
+3) Find the Be Brave Album<br>
+4) Start the first song "Brightside"<br>
+5) Tick off each song one by one
+
+</div>
+
+<div>
+<img id="beBrave" src="https://f4.bcbits.com/img/a0601743922_10.jpg" alt="Be Brave album cover">
+</div>
+
+</div>
+
+<h1>Song Notes: 1) Brightside</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 2) Dear John</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 3) Be Brave</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 4) Nights Like That</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 5) Wooden Decks</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 6) Game Changer</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 7) Neon Lights</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 8) Some Sort of Grace</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 9) Grand Delusions</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 10) Where Did I Go</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 11) Zombie Song</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+<h1>Song Notes: 12) Love of Folk</h1>
+
+<div id="songDetails" class="grid-container">
+
+<div>
+The first thing...<br>
+The second thing...<br>
+The third thing...<br>
+The fourth thing...
+
+</div>
+
+</div>
+
+
 
 
 <script src="/js/todolist.js"></script>
